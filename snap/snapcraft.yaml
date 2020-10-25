@@ -63,6 +63,12 @@ parts:
       - "-usr/lib/x86_64-linux-gnu/libQt5*"
       - "-usr/lib/x86_64-linux-gnu/libqt5*"
 
+slots:
+  dbus-kdiskmark:
+    interface: dbus
+    bus: session
+    name: com.kdiskmark.kdiskmark
+
 apps:
   kdiskmark:
     extensions:
@@ -74,3 +80,5 @@ apps:
       - x11
       - home
       - removable-media
+    slots:
+      - dbus-kdiskmark
