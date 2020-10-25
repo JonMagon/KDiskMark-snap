@@ -12,6 +12,9 @@ base: core18
 grade: devel # must be 'stable' to release into candidate/stable channels
 confinement: devmode # use 'strict' once you have the right plugs and slots
 
+architectures:
+  - build-on: amd64
+
 parts:
   kdiskmark:
     plugin: cmake
@@ -26,6 +29,13 @@ parts:
       - qttools5-dev
       - qttools5-dev-tools # Qt5LinguistTools
       - extra-cmake-modules
+    organize:
+      usr/share/qt5/translations/*.qm: usr/share/kdiskmark/translations/
+    source: https://github.com/JonMagon/KDiskMark.git
+    source-tag: 2.0.0
+    
+  runtime:
+    plugin: nil
     stage-packages:
       - fio
       - libdouble-conversion1
@@ -44,10 +54,14 @@ parts:
       - libxau6
       - libxcb1
       - libxdmcp6
-    organize:
-      usr/share/qt5/translations/*.qm: usr/share/kdiskmark/translations/
-    source: https://github.com/JonMagon/KDiskMark.git
-    source-tag: 2.0.0
+    prime:
+      - "-usr/share/fonts/*"
+      # https://forum.snapcraft.io/t/kde-neon-extension-libqt5core-so-5-version-qt-5-12-not-found/13744
+      # libquazip5-1 pulls in Qt5 from bionic as a dependency. We don't
+      # want it in our snap, however, because we get a newer Qt5 from the
+      # kde-kf5 platform snap.
+      - "-usr/lib/x86_64-linux-gnu/libQt5*"
+      - "-usr/lib/x86_64-linux-gnu/libqt5*"
 
 apps:
   kdiskmark:
