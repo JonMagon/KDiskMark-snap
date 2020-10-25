@@ -10,7 +10,7 @@ license: GPL-3.0
 base: core18
 
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: devmode # use 'strict' once you have the right plugs and slots
+confinement: strict
 
 architectures:
   - build-on: amd64
@@ -68,3 +68,9 @@ apps:
     extensions:
       - kde-neon
     command: usr/bin/kdiskmark
+    plugs:
+      - desktop
+      - desktop-legacy
+      - x11
+      - home
+      - removable-media
