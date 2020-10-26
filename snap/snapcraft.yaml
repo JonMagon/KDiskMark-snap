@@ -10,7 +10,7 @@ license: GPL-3.0
 base: core18
 
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: classic
+confinement: strict
 
 architectures:
   - build-on: amd64
