@@ -75,4 +75,5 @@ apps:
       - home
       - mount-observe
       - hardware-observe
+      - udisks2
       - removable-media

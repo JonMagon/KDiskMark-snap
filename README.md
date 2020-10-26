@@ -24,6 +24,7 @@ distributions.</p>
     sudo snap install kdiskmark
     sudo snap connect kdiskmark:mount-observe
     sudo snap connect kdiskmark:hardware-observe
+    sudo snap connect kdiskmark:udisks2
     sudo snap connect kdiskmark:removable-media
 
 <!-- Uncomment and modify this when your snap is available on the store
