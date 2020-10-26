@@ -74,3 +74,4 @@ apps:
       - x11
       - home
       - removable-media
+      - mount-observe
