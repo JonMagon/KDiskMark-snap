@@ -10,7 +10,7 @@ license: GPL-3.0
 base: core18
 
 grade: devel # must be 'stable' to release into candidate/stable channels
-confinement: strict
+confinement: classic
 
 architectures:
   - build-on: amd64
@@ -63,12 +63,6 @@ parts:
       - "-usr/lib/x86_64-linux-gnu/libQt5*"
       - "-usr/lib/x86_64-linux-gnu/libqt5*"
 
-slots:
-  dbus-kdiskmark:
-    interface: dbus
-    bus: session
-    name: com.kdiskmark.kdiskmark
-
 apps:
   kdiskmark:
     extensions:
@@ -80,5 +74,3 @@ apps:
       - x11
       - home
       - removable-media
-    slots:
-      - dbus-kdiskmark
