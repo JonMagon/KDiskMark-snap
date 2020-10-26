@@ -75,3 +75,4 @@ apps:
       - home
       - mount-observe
       - hardware-observe
+      - removable-media
