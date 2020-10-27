@@ -42,7 +42,7 @@ parts:
       - extra-cmake-modules
     override-build: |
       snapcraftctl build
-      sed -i 's|Icon=kdiskmark|Icon=${SNAP}/usr/share/icons/hicolor/512x512/apps/kdiskmark.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/kdiskmark.desktop
+      sed -i 's|Icon=kdiskmark|Icon=${SNAP}/usr/share/icons/hicolor/256x256/apps/kdiskmark.png|g' $SNAPCRAFT_PART_INSTALL/usr/share/applications/kdiskmark.desktop
     organize:
       usr/share/qt5/translations/*.qm: usr/share/kdiskmark/translations/
     source: https://github.com/JonMagon/KDiskMark.git
