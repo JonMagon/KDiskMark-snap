@@ -46,7 +46,7 @@ parts:
     organize:
       usr/share/qt5/translations/*.qm: usr/share/kdiskmark/translations/
     source: https://github.com/JonMagon/KDiskMark.git
-    source-commit: 4829cf4c244e526acbda5a76f91fb680ae488afc
+    source-commit: 5104b2be9bae490699add803ae4f40e398d01973
 
   runtime:
     plugin: nil
