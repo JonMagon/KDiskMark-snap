@@ -34,8 +34,8 @@ parts:
       - -DCMAKE_INSTALL_PREFIX=/usr
     build-snaps:
       - cmake
-      - kde-frameworks-5-qt-5-14-core18
-      - kde-frameworks-5-qt-5-14-core18-sdk
+      - kde-frameworks-5-core18
+      - kde-frameworks-5-core18-sdk
     build-packages:
       - qttools5-dev
       - qttools5-dev-tools # Qt5LinguistTools
