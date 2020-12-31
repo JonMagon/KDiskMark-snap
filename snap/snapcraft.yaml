@@ -1,5 +1,5 @@
 name: kdiskmark
-version: '2.0.0'
+version: '2.1.0'
 summary: A simple open-source disk benchmark tool for Linux distros
 description: |
   HDD and SSD benchmark tool with a very friendly graphical user interface.
