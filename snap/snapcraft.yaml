@@ -47,6 +47,12 @@ parts:
       usr/share/qt5/translations/*.qm: usr/share/kdiskmark/translations/
     source: https://github.com/JonMagon/KDiskMark.git
     source-commit: fa8347174f4a857c0bc6ef8358613aa8bedb8eca
+    prepare: git apply $SNAPCRAFT_STAGE/Cut-pagecache-clearing.patch
+  patches:
+    source: snap/patches
+    plugin: dump
+    prime:
+      - -*
 
   runtime:
     plugin: nil
