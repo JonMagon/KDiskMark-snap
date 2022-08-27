@@ -93,7 +93,3 @@ apps:
       - udisks2
       - removable-media
     desktop: usr/share/applications/kdiskmark.desktop
-
-layout:
-  /usr/share/X11/locale:
-    symlink: $SNAP/usr/share/X11/locale
