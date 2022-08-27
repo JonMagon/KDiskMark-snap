@@ -92,4 +92,5 @@ apps:
       - hardware-observe
       - udisks2
       - removable-media
+      - process-control
     desktop: usr/share/applications/kdiskmark.desktop
