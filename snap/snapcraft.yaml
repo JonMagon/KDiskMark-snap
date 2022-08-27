@@ -32,7 +32,6 @@ parts:
     configflags:
       - -DCMAKE_BUILD_TYPE=Release
       - -DCMAKE_INSTALL_PREFIX=/usr
-      - -DPERFORM_PAGECACHE_CLEARING_USING_KF5AUTH=OFF
     build-snaps:
       - cmake
       - kde-frameworks-5-core18
