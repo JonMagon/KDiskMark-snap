@@ -93,4 +93,12 @@ apps:
       - udisks2
       - removable-media
       - process-control
+      # https://forum.snapcraft.io/t/possibly-missing-apparmor-network-permission/15054/29
+      # This interface workarounds a crash on launch due to the denied
+      # dac_read_search capability usage
+      - system-backup
+      # https://forum.snapcraft.io/t/log-observe-autoconnect-request-for-soscleaner/17072/9
+      # This interface workarounds a permission denied error when starting
+      # a benchmark due to the denied dac_override capability usage
+      - log-observe
     desktop: usr/share/applications/kdiskmark.desktop
