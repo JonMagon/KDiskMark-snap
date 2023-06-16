@@ -1,5 +1,5 @@
 name: kdiskmark
-version: '3.1.3'
+version: '3.1.4'
 summary: A simple open-source disk benchmark tool for Linux distros
 description: |
   HDD and SSD benchmark tool with a very friendly graphical user interface.
@@ -31,7 +31,7 @@ parts:
     plugin: cmake
     configflags:
       - -DCMAKE_BUILD_TYPE=Release
-      - -DROOT_EDITION=OFF
+      - -DAPPIMAGE_EDITION=OFF
       - -DSNAP_EDITION=ON
       - -DCMAKE_INSTALL_PREFIX=/usr
     build-snaps:
@@ -49,7 +49,7 @@ parts:
     organize:
       usr/share/qt5/translations/*.qm: usr/share/kdiskmark/translations/
     source: https://github.com/JonMagon/KDiskMark.git
-    source-commit: b19260c85aaa7c86c08b3a2bf6ed1b7d51a450ed
+    source-commit: 3b04432832d628cba188447dc989ab8d6baff72d
 
   runtime:
     plugin: nil
